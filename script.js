@@ -50,7 +50,7 @@ function crearMariposa() {
     0.10 = 10%
     1 = 100% para probar
   */
-  const probabilidadEasterEgg = 0.02;
+  const probabilidadEasterEgg = 0.10;
 
   const esEasterEgg = Math.random() < probabilidadEasterEgg;
 
