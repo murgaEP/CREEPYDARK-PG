@@ -40,8 +40,8 @@ body {
 .titulo-imagen-contenedor::before {
   content: "";
   position: absolute;
-  width: 520px;
-  height: 140px;
+  width: 450px;
+  height: 115px;
   background: radial-gradient(
     circle,
     rgba(255, 240, 230, 0.42) 0%,
@@ -55,7 +55,7 @@ body {
 }
 
 .titulo-imagen {
-  width: 520px;
+  width: 450px;
   max-width: 82%;
   height: auto;
   position: relative;
