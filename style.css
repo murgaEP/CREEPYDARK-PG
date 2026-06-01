@@ -24,7 +24,7 @@ body {
 
 .encabezado {
   text-align: center;
-  padding: 20px 20px 10px;
+  padding: 18px 20px 8px;
 }
 
 /* Título como imagen */
@@ -33,53 +33,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   position: relative;
 }
 
 .titulo-imagen-contenedor::before {
   content: "";
   position: absolute;
-  width: 620px;
-  height: 120px;
+  width: 520px;
+  height: 140px;
   background: radial-gradient(
     circle,
-    rgba(255, 220, 220, 0.35),
-    rgba(150, 0, 50, 0.18),
-    transparent 70%
+    rgba(255, 240, 230, 0.42) 0%,
+    rgba(180, 120, 90, 0.22) 35%,
+    rgba(120, 20, 40, 0.18) 60%,
+    transparent 78%
   );
-  filter: blur(18px);
+  filter: blur(26px);
   z-index: 0;
+  pointer-events: none;
 }
 
 .titulo-imagen {
-  width: 620px;
-  max-width: 90%;
+  width: 520px;
+  max-width: 82%;
   height: auto;
   position: relative;
   z-index: 1;
+  display: block;
   filter:
-    drop-shadow(0 0 10px rgba(255, 220, 220, 0.75))
-    drop-shadow(0 0 24px rgba(150, 0, 50, 0.65));
-}
-
-/* Por si queda algún h1 antiguo */
-.titulo {
-  font-size: 48px;
-  letter-spacing: 4px;
-  color: #f2d6d6;
-  text-shadow:
-    0 0 12px #8b0034,
-    0 0 25px rgba(255, 0, 80, 0.35);
+    drop-shadow(0 0 8px rgba(255, 245, 235, 0.55))
+    drop-shadow(0 0 18px rgba(255, 220, 190, 0.30))
+    drop-shadow(0 0 34px rgba(120, 20, 40, 0.55))
+    drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
 }
 
 .subtitulo {
-  margin-top: 4px;
+  margin-top: 6px;
   font-size: 18px;
   color: #f3dada;
   text-shadow:
-    0 0 8px rgba(0, 0, 0, 0.9),
-    0 0 12px rgba(150, 0, 50, 0.55);
+    0 0 8px rgba(0, 0, 0, 0.95),
+    0 0 14px rgba(150, 0, 50, 0.45);
 }
 
 /* Carrusel infinito */
@@ -534,18 +529,15 @@ body {
 /* Responsive */
 
 @media (max-width: 768px) {
-  .titulo {
-    font-size: 34px;
-  }
-
   .titulo-imagen {
-    width: 360px;
-    max-width: 95%;
+    width: 320px;
+    max-width: 90%;
   }
 
   .titulo-imagen-contenedor::before {
-    width: 360px;
-    height: 90px;
+    width: 320px;
+    height: 100px;
+    filter: blur(18px);
   }
 
   .subtitulo {
