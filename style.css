@@ -319,6 +319,28 @@ body {
   background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
 }
 
+.furaffinity:hover {
+  background: #1b7f5a;
+}
+
+.deviantart:hover {
+  background: #05cc47;
+}
+
+.patreon:hover {
+  background: #ff424d;
+}
+
+.tumblr:hover {
+  background: #35465c;
+}
+
+.furaffinity span {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 /* Personajes en esquinas */
 
 .personaje {
