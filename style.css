@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #f5e8e8;
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url("img/fondo.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Encabezado */
+
+.encabezado {
+  text-align: center;
+  padding: 35px 20px 20px;
+}
+
+.titulo {
+  font-size: 48px;
+  letter-spacing: 4px;
+  color: #f2d6d6;
+  text-shadow:
+    0 0 12px #8b0034,
+    0 0 25px rgba(255, 0, 80, 0.35);
+}
+
+.subtitulo {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #caa6a6;
+}
+
+/* Carrusel infinito */
+
+.carrusel {
+  width: 100%;
+  padding: 25px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel::before,
+.carrusel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carrusel::before {
+  left: 0;
+  background: linear-gradient(to right, #050505, transparent);
+}
+
+.carrusel::after {
+  right: 0;
+  background: linear-gradient(to left, #050505, transparent);
+}
+
+.contenedor-carrusel {
+  display: flex;
+  width: max-content;
+  animation: moverCarrusel 35s linear infinite;
+}
+
+.contenedor-carrusel:hover {
+  animation-play-state: paused;
+}
+
+.grupo-carrusel {
+  display: flex;
+  gap: 45px;
+  padding-right: 50px;
+}
+
+/* Marco elegante antiguo */
+
+.tarjeta-dibujo {
+  width: 220px;
+  height: 290px;
+  position: relative;
+  padding: 10px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, #2b1608, #c09a4a, #3a1b0a, #8b6a2e);
+  box-shadow:
+    0 0 18px rgba(150, 0, 50, 0.45),
+    inset 0 0 12px rgba(255, 230, 160, 0.45);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tarjeta-dibujo::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 2px solid rgba(255, 220, 140, 0.65);
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tarjeta-dibujo::after {
+  content: "✧";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f3d28a;
+  font-size: 18px;
+  text-shadow: 0 0 8px #000;
+  z-index: 3;
+}
+
+.tarjeta-dibujo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.tarjeta-dibujo:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 28px rgba(214, 168, 92, 0.75),
+    inset 0 0 18px rgba(255, 230, 160, 0.55);
+}
+
+@keyframes moverCarrusel {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Presentación principal */
+
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 140px;
+}
+
+.presentacion {
+  max-width: 750px;
+  text-align: center;
+  padding: 40px;
+  border: 2px solid #6e1730;
+  border-radius: 25px;
+  background: rgba(10, 5, 8, 0.82);
+  box-shadow:
+    0 0 30px rgba(130, 0, 45, 0.55),
+    inset 0 0 25px rgba(255, 255, 255, 0.04);
+}
+
+.presentacion h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  color: #f8dcdc;
+}
+
+.presentacion p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d8bcbc;
+  margin-bottom: 30px;
+}
+
+/* Botones de redes */
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.boton {
+  text-decoration: none;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  font-size: 26px;
+  border: 1px solid #d6a85c;
+  background: linear-gradient(135deg, #2a0612, #78002c);
+  box-shadow: 0 0 12px rgba(150, 0, 50, 0.6);
+  transition: 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: linear-gradient(135deg, #78002c, #d6a85c);
+  box-shadow: 0 0 22px rgba(214, 168, 92, 0.8);
+}
+
+.youtube:hover {
+  background: #c4302b;
+}
+
+.twitch:hover {
+  background: #6441a5;
+}
+
+.tiktok:hover {
+  background: #111111;
+}
+
+.twitter:hover {
+  background: #1da1f2;
+}
+
+.instagram:hover {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+/* Personajes en esquinas */
+
+.personaje {
+  position: fixed;
+  bottom: 0;
+  width: 150px;
+  z-index: 10;
+  filter: drop-shadow(0 0 18px rgba(255, 220, 220, 0.45));
+}
+
+.personaje-izquierda {
+  left: 15px;
+}
+
+.personaje-derecha {
+  right: 15px;
+  transform: scaleX(-1);
+}
+
+/* Cortinas laterales */
+
+.cortina {
+  position: fixed;
+  top: 0;
+  height: calc(100vh - 250px);
+  width: 300px;
+  object-fit: cover;
+  z-index: 8;
+  pointer-events: none;
+  filter: brightness(0.55) drop-shadow(0 0 25px rgb(0, 0, 0));
+}
+
+.cortina-izquierda {
+  left: 0;
+}
+
+.cortina-derecha {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* Popup de imagen completa */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 30px;
+}
+
+.popup.activo {
+  display: flex;
+}
+
+.popup-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid #d6a85c;
+  border-radius: 18px;
+  box-shadow: 0 0 35px rgba(214, 168, 92, 0.65);
+  animation: aparecerImagen 0.3s ease;
+}
+
+.cerrar-popup {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  font-size: 48px;
+  color: #f5e8e8;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.cerrar-popup:hover {
+  color: #d6a85c;
+  transform: scale(1.15);
+}
+
+@keyframes aparecerImagen {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mariposas azules con GIF */
+
+.contenedor-mariposas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 7;
+}
+
+.mariposa {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-image: url("img/mariposa-azul.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  filter:
+    drop-shadow(0 0 8px rgba(0, 170, 255, 0.9))
+    brightness(1.15);
+  animation: vueloMariposa 9s linear forwards;
+}
+
+@keyframes vueloMariposa {
+  0% {
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(var(--movimiento-x), var(--movimiento-y)) scale(1) rotate(18deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(calc(var(--movimiento-x) * 1.8), calc(var(--movimiento-y) * 1.8)) scale(0.75) rotate(-25deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 34px;
+  }
+
+  .subtitulo {
+    font-size: 15px;
+  }
+
+  .tarjeta-dibujo {
+    width: 170px;
+    height: 230px;
+  }
+
+  .presentacion {
+    padding: 28px 20px;
+  }
+
+  .presentacion h2 {
+    font-size: 26px;
+  }
+
+  .presentacion p {
+    font-size: 16px;
+  }
+
+  .boton {
+    width: 52px;
+    height: 52px;
+    font-size: 23px;
+    max-width: none;
+  }
+
+  .personaje {
+    width: 95px;
+  }
+
+  .cortina {
+    width: 120px;
+    height: calc(100vh - 160px);
+    opacity: 0.9;
+  }
+
+  .carrusel::before,
+  .carrusel::after {
+    width: 60px;
+  }
+
+  .popup-img {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+
+  .cerrar-popup {
+    top: 15px;
+    right: 25px;
+    font-size: 42px;
+  }
+
+  .mariposa {
+    width: 28px;
+    height: 28px;
+  }
+}

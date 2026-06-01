@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CREEPYDARK</title>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Iconos de redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Contenedor de mariposas -->
+  <div class="contenedor-mariposas"></div>
+
+  <!-- Cortinas laterales -->
+  <img class="cortina cortina-izquierda" src="img/cortina-izquierda.png" alt="Cortina izquierda">
+  <img class="cortina cortina-derecha" src="img/cortina-izquierda.png" alt="Cortina derecha">
+
+  <header class="encabezado">
+    <h1 class="titulo">CREEPYDARK</h1>
+    <p class="subtitulo">Arte gótico • Dibujos • Streams</p>
+  </header>
+
+  <section class="carrusel">
+    <div class="contenedor-carrusel">
+
+      <!-- Grupo 1 -->
+      <div class="grupo-carrusel">
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo1.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo2.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo3.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo4.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo5.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo6.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo7.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo8.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo9.jpg" alt="Dibujo de la artista">
+        </div>
+
+      </div>
+
+      <!-- Grupo 2 repetido para efecto infinito -->
+      <div class="grupo-carrusel">
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo1.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo2.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo3.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo4.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo5.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo6.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo7.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo8.jpg" alt="Dibujo de la artista">
+        </div>
+
+        <div class="tarjeta-dibujo">
+          <img src="img/dibujo9.jpg" alt="Dibujo de la artista">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <main class="principal">
+    <section class="presentacion">
+      <h2>Bienvenido a mi mundo de porcelana</h2>
+
+      <p>
+        Un espacio oscuro, elegante y artístico donde comparto mis dibujos,
+        streams y proyectos creativos.
+      </p>
+
+      <div class="redes">
+
+        <a href="https://www.youtube.com/channel/UCvbIBOgexCnRjTQapzXACMg" class="boton youtube" target="_blank" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.twitch.tv/creepydark98" class="boton twitch" target="_blank" title="Twitch">
+          <i class="fa-brands fa-twitch"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@creepydark98" class="boton tiktok" target="_blank" title="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="https://x.com/Creepydark98" class="boton twitter" target="_blank" title="Twitter / X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Personajes de las esquinas -->
+  <img class="personaje personaje-izquierda" src="img/esquienroiz.png" alt="CREEPYDARK">
+  <img class="personaje personaje-derecha" src="img/esquienroiz.png" alt="CREEPYDARK">
+
+  <!-- Popup para ver imagen completa -->
+  <div class="popup" id="popup">
+    <span class="cerrar-popup" id="cerrarPopup">&times;</span>
+    <img class="popup-img" id="popupImg" src="" alt="Imagen completa">
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
