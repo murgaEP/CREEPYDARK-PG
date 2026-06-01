@@ -158,59 +158,89 @@ body {
 .principal {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 35px;
-  padding: 40px 20px 140px;
-  max-width: 1200px;
+  align-items: center;
+  gap: 55px;
+  padding: 35px 20px 140px;
+  max-width: 1250px;
   margin: 0 auto;
+  transform: translateX(45px);
 }
 
 /* Ventana del stream */
 
 .stream-box {
-  width: 460px;
+  width: 430px;
   text-align: center;
-  padding: 28px;
+  padding: 18px;
   border: 2px solid #6e1730;
   border-radius: 25px;
-  background: rgba(10, 5, 8, 0.82);
+  background: rgba(10, 5, 8, 0.86);
   box-shadow:
     0 0 30px rgba(130, 0, 45, 0.55),
     inset 0 0 25px rgba(255, 255, 255, 0.04);
 }
 
 .stream-titulo {
-  font-size: 26px;
-  margin-bottom: 18px;
+  font-size: 25px;
+  margin-bottom: 14px;
   color: #f8dcdc;
-  text-shadow: 0 0 10px rgba(139, 0, 52, 0.8);
+  text-shadow:
+    0 0 8px rgba(139, 0, 52, 0.9),
+    0 0 16px rgba(214, 168, 92, 0.4);
 }
 
 .stream-marco {
   width: 100%;
   aspect-ratio: 16 / 9;
-  padding: 10px;
-  border-radius: 18px;
+  padding: 12px;
+  border-radius: 22px;
+  position: relative;
   background:
     linear-gradient(135deg, #2b1608, #c09a4a, #3a1b0a, #8b6a2e);
   box-shadow:
-    0 0 18px rgba(150, 0, 50, 0.45),
-    inset 0 0 12px rgba(255, 230, 160, 0.45);
+    0 0 18px rgba(0, 0, 0, 0.85),
+    0 0 25px rgba(180, 120, 35, 0.45),
+    inset 0 0 14px rgba(255, 230, 160, 0.45);
+}
+
+.stream-marco::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 2px solid rgba(255, 220, 140, 0.7);
+  border-radius: 17px;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow:
+    inset 0 0 8px rgba(0, 0, 0, 0.7),
+    0 0 8px rgba(255, 220, 140, 0.35);
+}
+
+.stream-marco::after {
+  content: "✧";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f3d28a;
+  font-size: 18px;
+  text-shadow: 0 0 8px #000;
+  z-index: 3;
 }
 
 .stream-marco iframe {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 13px;
   display: block;
   background: #000;
 }
 
-/* Presentación */
+/* Presentación y redes */
 
 .presentacion {
-  max-width: 600px;
+  max-width: 620px;
   text-align: center;
   padding: 40px;
   border: 2px solid #6e1730;
@@ -463,6 +493,8 @@ body {
   .principal {
     flex-direction: column;
     align-items: center;
+    transform: translateX(0);
+    gap: 25px;
   }
 
   .stream-box {
