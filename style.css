@@ -368,6 +368,14 @@ body {
   animation: vueloMariposa 9s linear forwards;
 }
 
+.mariposa-easteregg {
+  background-image: url("img/mariposa-easteregg.webp");
+  filter:
+    drop-shadow(0 0 14px rgba(255, 0, 180, 0.95))
+    brightness(1.25)
+    contrast(1.15);
+}
+
 @keyframes vueloMariposa {
   0% {
     transform: translate(0, 0) scale(0.6) rotate(0deg);
