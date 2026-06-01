@@ -24,9 +24,46 @@ body {
 
 .encabezado {
   text-align: center;
-  padding: 35px 20px 20px;
+  padding: 20px 20px 10px;
 }
 
+/* Título como imagen */
+
+.titulo-imagen-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.titulo-imagen-contenedor::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 220, 220, 0.35),
+    rgba(150, 0, 50, 0.18),
+    transparent 70%
+  );
+  filter: blur(18px);
+  z-index: 0;
+}
+
+.titulo-imagen {
+  width: 620px;
+  max-width: 90%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter:
+    drop-shadow(0 0 10px rgba(255, 220, 220, 0.75))
+    drop-shadow(0 0 24px rgba(150, 0, 50, 0.65));
+}
+
+/* Por si queda algún h1 antiguo */
 .titulo {
   font-size: 48px;
   letter-spacing: 4px;
@@ -37,9 +74,12 @@ body {
 }
 
 .subtitulo {
-  margin-top: 10px;
+  margin-top: 4px;
   font-size: 18px;
-  color: #caa6a6;
+  color: #f3dada;
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(150, 0, 50, 0.55);
 }
 
 /* Carrusel infinito */
@@ -315,10 +355,6 @@ body {
   background: #1da1f2;
 }
 
-.instagram:hover {
-  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-}
-
 .furaffinity:hover {
   background: #1b7f5a;
 }
@@ -330,7 +366,6 @@ body {
 .patreon:hover {
   background: #ff424d;
 }
-
 
 .furaffinity span {
   font-size: 20px;
@@ -501,6 +536,16 @@ body {
 @media (max-width: 768px) {
   .titulo {
     font-size: 34px;
+  }
+
+  .titulo-imagen {
+    width: 360px;
+    max-width: 95%;
+  }
+
+  .titulo-imagen-contenedor::before {
+    width: 360px;
+    height: 90px;
   }
 
   .subtitulo {
